@@ -1,3 +1,27 @@
 {
-  "message": "hello i18n !!"
+  "WJv6Pqdvj8ph9xkuZ": "Bangkok",
+  "iYxbif49rJQTBFfCe": "Beijing",
+  "ubH3hWtBceEJqZx2X": "Berlin",
+  "udATxjrXtEuv2R3vk": "Budapest",
+  "ddb9n6wJjtYneTR4n": "Dubai",
+  "QtdyzkPatgqoZoSv2": "Guangzhou",
+  "r7riqBE5ZNuB5mB4q": "Hong Kong",
+  "6knMH3Y4XgY73QAeh": "Istanbul",
+  "LembLiKtxzRZbDYP4": "Jakarta",
+  "7McFS9nFSf5TQmwva": "London",
+  "xwJyTC4tyag4svdTe": "Los Angeles",
+  "gXTDkEBCX9BBKe5wc": "New York",
+  "ChPMZH6KoB7GBnHAx": "Riyadh",
+  "KxnLg5issKdfCRjDe": "São Paulo",
+  "2rwQKsaAs2MnT8bBQ": "Seoul",
+  "R6kPWmwE4Nts3vq3k": "Shanghai",
+  "HE9g3tCPyEaz6Jbxa": "Sydney",
+  "mtEaKTNkstXxLfcw6": "Tokyo",
+  "xrtYAHYiJG4pW9NXg": "Toronto",
+  "select_your_city": "Please select your city",
+  "share": "Share this information",
+  "hashtag": "#CleanAirNow",
+  "f_share_url": "https://www.facebook.com/",
+  "t_share_url": "https://twitter.com/",
+  "deaths": "In the city of {currentCity} which is in the country of China, {adultDeaths} adults have died."
 }
