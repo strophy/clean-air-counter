@@ -1,7 +1,11 @@
+import '@babel/polyfill'
+import 'mutationobserver-shim'
 import Vue from 'vue'
-import './plugins/axios'
-import App from './App.vue'
+import './plugins/bootstrap-vue'
 import i18n from './i18n'
+import App from './App.vue'
+import './plugins/axios'
+
 
 Vue.config.productionTip = false
 

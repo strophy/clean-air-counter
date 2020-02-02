@@ -15,7 +15,12 @@ export default {
         ShowData,
     },
     methods: {
-        //
+        getData: function(value) {
+            const url = 'https://y2mta1n6vj.execute-api.us-east-1.amazonaws.com/prod/pollutionCostCounter/' + value;
+            this.axios
+                .get(url)
+                .then(response => (this.cityData = response.data))
+        }
     },
     data: function() {
         return {
