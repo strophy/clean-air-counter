@@ -4,13 +4,13 @@
             {{ $t('select_your_city') }}
         </option>
         <option v-for="option in options" v-bind:key="option.value" v-bind:value="option.value">
-            {{ $t(option.value) }}
+            {{ $t('cities.' + option.value) }}
         </option>
     </select>
 </template>
 
 <script>
-import cities from './cities'
+import cities from '../cities'
 export default {
     name: 'Dropdown',
     methods: {
