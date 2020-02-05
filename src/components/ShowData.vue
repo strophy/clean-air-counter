@@ -1,16 +1,35 @@
 <template>
     <div v-if="this.$parent.cityData">
-        <i18n path="deaths" tag="p">
+        <i18n path="deaths" tag="p" id="costtext">
             <template #city>
-                <h2><strong>{{ $t('cities.' + cityData.cityID) }}</strong></h2>
+                <strong class="bg-primary">{{ $t('cities.' + cityData.cityID) }}</strong>
             </template>
-            <template #adultDeaths>
-                <span>{{ cityData.pollutants.ytd.no2 }}</span>
+            <template #costLine><br />
+                <span class="bg-primary font-weight-bold">
+                    {{ Math.round(cityData.pollutants.ytd.no2) }} {{ $t('life_cost') }}
+                </span> 
+                {{ $t('and') }} 
+                <span class="bg-primary font-weight-bold">
+                    ${{ cityData.population }}
+                </span><br />
+            </template>
+            <template #showDate>
+                <span>{{ $d(new Date(2020, 0, 1), 'long') }}</span>
             </template>
         </i18n>
         <hr />
         <strong>{{ $t('share') }}</strong><br />
-        <strong>{{ $t('hashtag' )}}</strong>
+        <a 
+          class="btn btn-secondary m-1 twitter-share-button" 
+          data-text="Test text" 
+          data-lang="en"
+          data-show-count="false"
+          data-hashtags="CleanAirNow" 
+          href='https://twitter.com/share?ref_src=twsrc%5Etfw' 
+          role="button">
+          {{ $t('twitter') }}
+        </a>
+        <a class="btn btn-secondary m-1" :href="$t('f_share_url')" role="button">{{ $t('facebook') }}</a>
     </div>
 </template>
 
@@ -24,3 +43,9 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+    #costtext{
+        font-size: 1.7rem
+    }
+</style>

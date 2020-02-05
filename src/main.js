@@ -8,8 +8,14 @@ import './plugins/axios'
 
 
 Vue.config.productionTip = false
+const mountEl = document.querySelector('#app');
 
 new Vue({
   i18n,
-  render: h => h(App)
+  render: createElement => {
+    const context = {
+      props: { ...mountEl.dataset },
+    };
+    return createElement(App, context);
+  }
 }).$mount('#app')

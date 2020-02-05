@@ -3,6 +3,19 @@ import VueI18n from 'vue-i18n'
 
 Vue.use(VueI18n)
 
+const setDateTimeFormats = {
+  long: {
+    year: "numeric",
+    month: "long",
+    day: "numeric"
+  }
+}
+
+const dateTimeFormats = {
+  "en": setDateTimeFormats,
+  "zh": setDateTimeFormats,
+}
+
 function loadLocaleMessages () {
   const locales = require.context('./locales', true, /[A-Za-z0-9-_,\s]+\.json$/i)
   const messages = {}
@@ -19,5 +32,6 @@ function loadLocaleMessages () {
 export default new VueI18n({
   locale: process.env.VUE_APP_I18N_LOCALE || 'en',
   fallbackLocale: process.env.VUE_APP_I18N_FALLBACK_LOCALE || 'en',
-  messages: loadLocaleMessages()
+  messages: loadLocaleMessages(),
+  dateTimeFormats
 })

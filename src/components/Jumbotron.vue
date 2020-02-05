@@ -1,11 +1,20 @@
 <template>
-    <div id="cityinfo" class="jumbotron border-primary bg-info">
-        <div class="btn-group btn-group-sm mb-3" role="group" aria-label="Basic example">
+    <div id="cityinfo" class="jumbotron border bg-transparent">
+        <div class="btn-group btn-group-sm mb-3" role="group" aria-label="Select your city">
             <button @click="setLocale('en')" class="btn btn-primary">English</button>
             <button @click="setLocale('zh')" class="btn btn-primary">中文</button>
         </div>
+        <h2>{{ $t('lead_text') }}</h2>
         <Dropdown @update:option="getData" class="mb-5"></Dropdown>
         <ShowData :cityData=cityData></ShowData>
+        <i18n path="created" tag="p">
+            <template #greenpeace>
+                <a href="https://www.greenpeace.org/southeastasia/" target="_blank">{{ $t('greenpeace') }}</a>
+            </template>
+            <template #airvisual>
+                <a href="https://www.airvisual.com/" target="_blank">Air Visual</a>
+            </template>
+        </i18n>
     </div>
 </template>
 
@@ -36,3 +45,11 @@ export default {
     }
 }
 </script>
+
+<style>
+    #cityinfo {
+        border-width: 5px !important;
+        padding: 1rem !important;
+    }
+
+</style>
