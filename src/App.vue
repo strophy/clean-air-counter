@@ -1,7 +1,5 @@
 <template>
   <div id="app">
-    <!--<img alt="Vue logo" src="./assets/Greenpeace.svg">-->
-    <!--<h1>Clean Air Counters!</h1>-->
     <Jumbotron />
   </div>
 </template>
