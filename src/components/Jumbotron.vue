@@ -1,7 +1,12 @@
 <template>
     <div id="cityinfo" class="jumbotron border bg-transparent">
         <div class="btn-group btn-group-sm mb-3" role="group" aria-label="Select your city">
+            <button @click="setLocale('id')" class="btn btn-primary">Bahasa Indonesia</button>
             <button @click="setLocale('en')" class="btn btn-primary">English</button>
+            <button @click="setLocale('es')" class="btn btn-primary">Español</button>
+            <button @click="setLocale('ro')" class="btn btn-primary">Română</button>
+            <button @click="setLocale('tr')" class="btn btn-primary">Türkçe</button>
+            <button @click="setLocale('th')" class="btn btn-primary">ไทย</button>
             <button @click="setLocale('zh')" class="btn btn-primary">中文</button>
         </div>
         <h2>{{ $t('lead_text') }}</h2>
