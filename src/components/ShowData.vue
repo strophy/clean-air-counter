@@ -5,13 +5,9 @@
                 <strong class="bg-primary">{{ $t('cities.' + cityData.cityID) }}</strong>
             </template>
             <template #costLine><br />
-                <span class="bg-primary font-weight-bold">
-                    {{ Math.round(cityData.pollutants.ytd.no2) }} {{ $t('life_cost') }}
-                </span> 
-                {{ $t('and') }} 
-                <span class="bg-primary font-weight-bold">
-                    ${{ cityData.population }}
-                </span><br />
+                <span class="bg-primary font-weight-bold">{{ Math.round(cityData.estimations.ytd["PM2.5"][1].number_central).toLocaleString() }} {{ $t('life_cost')}}</span>
+                <span class="bg-transparent"> {{ $t('and') }} </span>
+                <span class="bg-primary font-weight-bold">${{ Math.round(cityData.estimations.ytd["PM2.5"][0]["cost.USD_central"]).toLocaleString() }}</span><br />
             </template>
             <template #showDate>
                 <span>{{ $d(new Date(2020, 0, 1), 'long') }}</span>

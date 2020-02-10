@@ -3,14 +3,16 @@
         <option disabled value="select_your_city">
             {{ $t('select_your_city') }}
         </option>
-        <option v-for="option in options" v-bind:key="option.value" v-bind:value="option.value">
-            {{ $t('cities.' + option.value) }}
+        <option v-for="option in options" v-bind:key="option" v-bind:value="option">
+            {{ $t('cities.' + option) }}
         </option>
     </select>
 </template>
 
 <script>
-import cities from '../cities'
+import cities from './cities.json';
+
+
 export default {
     name: 'Dropdown',
     methods: {
@@ -21,7 +23,7 @@ export default {
     data: function() {
         return {
             selected: 'select_your_city',
-            options: cities,
+            options: cities.global
         }
     }
 }
