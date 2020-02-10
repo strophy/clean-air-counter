@@ -1,6 +1,7 @@
 <template>
     <div id="cityinfo" class="jumbotron border bg-transparent">
         <div class="btn-group btn-group-sm mb-3" role="group" aria-label="Select your city">
+            <button @click="setLocale('ar')" class="btn btn-primary">اَلْعَرَبِيَّةُ</button>
             <button @click="setLocale('id')" class="btn btn-primary">Bahasa Indonesia</button>
             <button @click="setLocale('en')" class="btn btn-primary">English</button>
             <button @click="setLocale('es')" class="btn btn-primary">Español</button>
