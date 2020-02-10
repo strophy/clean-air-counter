@@ -12,7 +12,13 @@ const setDateTimeFormats = {
 }
 
 const dateTimeFormats = {
+  "ar": setDateTimeFormats,
   "en": setDateTimeFormats,
+  "es": setDateTimeFormats,
+  "id": setDateTimeFormats,
+  "ro": setDateTimeFormats,
+  "th": setDateTimeFormats,
+  "tr": setDateTimeFormats,
   "zh": setDateTimeFormats,
 }
 
