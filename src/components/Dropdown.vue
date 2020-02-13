@@ -11,11 +11,10 @@
 
 <script>
 import cities from './cities.json';
-const loadedCities = cities.global;
-var sortedCities = [];
 
 export default {
     name: 'Dropdown',
+    props: ['cityList'],
     methods: {
         optionChanged: function() {
             this.$emit('update:option', this.selected)
@@ -23,14 +22,13 @@ export default {
     },
     data: function() {
         return {
-            selected: 'select_your_city',
-            options: cities.global,
-            sortedCities
+            selected: 'select_your_city'
         }
     },
     computed: {
         sortCities: function () {
-            sortedCities = [];
+            const loadedCities = cities[this.cityList];
+            var sortedCities = [];
             for (var city in loadedCities) {
                 sortedCities.push({id: loadedCities[city], name: this.$t('cities.' + loadedCities[city])})
                 sortedCities.sort((a, b) => (a.name > b.name) ? 1 : -1);               
