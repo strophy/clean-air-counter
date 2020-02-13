@@ -1,8 +1,8 @@
 {
     "lead_text": "Hava kirliliğinin şehrinize maliyeti nedir?",
     "select_your_city": "Lütfen şehrinizi seçin",
-    "deaths": "{city} PM2.5 kirliliği, {showDate} tarihinden itibaren tahmini olarak {costLine} maliyete sahiptir.",
-    "life_cost": "hayatları",
+    "deaths": "{city}'da PM2.5 kirliliği, {showDate} tarihinden itibaren tahmini olarak {costLine} mal olmuştur.",
+    "life_cost": "hayata",
     "and": "ve",
     "hashtag": "#TemizHavaŞimdi",
     "share": "Bu bilgileri paylaşın",
