@@ -21,16 +21,4 @@ new Vue({
   components: {appLoader}
 });
 
-// Why do I need to nest loaders 3 times like this? Can I move the component to App.vue and put the props there?
-// Why doesn't it render in live build mode anymore? Fix this first
 // Then work out how to store the vars in a sensible place and act on them
-
-
-/*
-new Vue({
-  i18n,
-  render: createElement => {
-    return createElement(App);
-  }
-}).$mount('#app')
-*/
