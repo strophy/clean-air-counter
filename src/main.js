@@ -18,5 +18,6 @@ const appLoader = Vue.component('clean-air-counter', {
 new Vue({
   el: '#app',
   i18n,
-  components: {appLoader}
+  components: {appLoader},
+  render: h => h(appLoader)
 });
