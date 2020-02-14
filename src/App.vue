@@ -1,5 +1,5 @@
 <template>
-    <div id="cityinfo" class="jumbotron border bg-transparent">
+    <div id="cityinfo" class="jumbotron border bg-transparent" style="border-width: 5px !important; padding: 1rem !important; text-align: center;">
           <div class="btn-group btn-group-sm mb-3" role="group" aria-label="Select your list">
             <button @click="setList('global')" class="btn btn-primary">Global</button>
             <button @click="setList('indonesia')" class="btn btn-primary">Indonesia</button>
@@ -74,11 +74,3 @@ export default {
     }
 }
 </script>
-
-<style>
-    #cityinfo {
-        border-width: 5px !important;
-        padding: 1rem !important;
-        text-align: center;
-    }
-</style>

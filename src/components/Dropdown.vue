@@ -1,5 +1,5 @@
 <template>
-    <select v-model="selected" name="dropdown" id="dropdown" @change="optionChanged" class="custom-select custom-select-lg">
+    <select style="width: 100%" v-model="selected" name="dropdown" id="dropdown" @change="optionChanged" class="custom-select custom-select-lg">
         <option disabled value="select_your_city">
             {{ $t('select_your_city') }}
         </option>
@@ -38,9 +38,3 @@ export default {
     }
 }
 </script>
-
-<style>
-select {
-    width: 100%;
-}
-</style>
