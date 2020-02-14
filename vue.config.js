@@ -1,13 +1,16 @@
 module.exports = {
   publicPath: '',
-  configureWebpack: {
-    optimization: {
-      splitChunks: false
-    },
-    externals: {
-      'vue': 'Vue'
-      /*'vue-i18n': 'vue-i18n',
-      'jquery': 'jquery',*/
+  configureWebpack: config => {
+    if (process.env.NODE_ENV === 'production') {
+      config.externals = {
+        'vue': 'Vue',
+        //'vue-i18n': 'vue-i18n'
+      },
+      config.optimization = {
+        splitChunks: false
+      }
+    } else {
+      config.mode = 'development'
     }
   },
   filenameHashing: false,

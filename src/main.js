@@ -5,8 +5,8 @@ import i18n from './i18n'
 import App from './App.vue'
 import './plugins/axios'
 
-var lang = '';
-var citylist = '';
+var lang = 'en';
+var citylist = 'global';
 const appLoader = Vue.component('clean-air-counter', {
   functional: true,
   props: [lang, citylist],
@@ -20,5 +20,3 @@ new Vue({
   i18n,
   components: {appLoader}
 });
-
-// Then work out how to store the vars in a sensible place and act on them
