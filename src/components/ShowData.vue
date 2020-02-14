@@ -16,16 +16,13 @@
         <hr />
         <div>
             <strong>{{ $t('share') }}</strong><br />
-            <a class="btn btn-warning m-1" href="" role="button">{{ $t('twitter') }}</a>
-            <a class="btn btn-warning m-1" href="" role="button">{{ $t('facebook') }}</a>
+            <a class="btn btn-warning m-1" id="twittersharebutton" href="" target="_blank" role="button">{{ $t('twitter') }}</a>
+            <a class="btn btn-warning m-1" id="facebooksharebutton" href="" target="_blank" role="button">{{ $t('facebook') }}</a>
         </div>
     </div>
 </template>
 
 <script>
-/* eslint-disable */
-var twitterShare = '';
-var facebookShare = '';
 export default {
     name: 'ShowData',
     props: ['cityData'],
@@ -34,17 +31,12 @@ export default {
         }
     },
     updated: function () {
-        var twitterBase = "https://twitter.com/intent/tweet?";
-        var facebookBase = "https://www.facebook.com/sharer/sharer.php?";
-
         var shareText = document.getElementById("costtext").textContent;
-        var shareUrl = "https://www.airvisual.com/";
         var shareHashtag = this.$t('hashtag');
-
-        twitterShare = twitterBase + 'text=' + shareText + '&url=' + shareUrl + '&hashtags=' + shareHashtag;
-        facebookShare = facebookBase + 'u=' + shareUrl;
-        console.log(encodeURI(twitterShare))
-        console.log(encodeURI(facebookShare))
+        var twitterShare = 'https://twitter.com/intent/tweet?text=' + shareText + '&url=' + window.location.href + '&hashtags=' + shareHashtag;
+        var facebookShare = 'https://www.facebook.com/sharer/sharer.php?u=' + window.location.href;
+        document.getElementById('twittersharebutton').href = twitterShare
+        document.getElementById('facebooksharebutton').href = facebookShare
     }
 }
 </script>
