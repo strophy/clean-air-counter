@@ -5,8 +5,8 @@ import i18n from './i18n'
 import App from './App.vue'
 import './plugins/axios'
 
-var lang = 'en';
-var citylist = 'global';
+var lang = '';
+var citylist = '';
 const appLoader = Vue.component('clean-air-counter', {
   functional: true,
   props: [lang, citylist],
