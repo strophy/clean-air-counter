@@ -4,16 +4,15 @@ module.exports = {
     if (process.env.NODE_ENV === 'production') {
       config.externals = {
         'vue': 'Vue',
-        //'vue-i18n': 'vue-i18n'
       },
       config.optimization = {
         splitChunks: false
       }
     } else {
-      config.mode = 'development'
     }
   },
   filenameHashing: false,
+  runtimeCompiler: true,
   pluginOptions: {
     i18n: {
       locale: 'en',
